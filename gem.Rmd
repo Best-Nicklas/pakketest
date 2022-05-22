@@ -1,0 +1,39 @@
+---
+title: "pakkesetup"
+output: html_document
+date: '2022-05-22'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+```{r}
+devtools::create("pakke1")
+devtools::document() #converts documentations
+usethis::use_vignette("testvig")
+usethis::use_package_doc() #docs for package
+devtools::build()
+devtools::load_all()
+devtools::install()
+usethis::use_readme_md()
+
+```
+
+```{r}
+devtools::install_github("Best-Nicklas/TestPackageSiteR")
+devtools::build()
+
+```
+```{r}
+
+usethis::use_pkgdown()
+# Run to build the website
+pkgdown::build_site()
+usethis::use_pkgdown_github_pages()
+
+```
+
