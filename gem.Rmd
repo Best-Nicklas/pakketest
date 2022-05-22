@@ -18,6 +18,7 @@ usethis::use_vignette("testvig")
 usethis::use_package_doc() #docs for package
 devtools::build()
 devtools::load_all()
+usethis::use_mit_license()
 devtools::install()
 usethis::use_readme_md()
 
@@ -25,9 +26,9 @@ usethis::use_readme_md()
 
 ```{r}
 devtools::install_github("Best-Nicklas/TestPackageSiteR")
-devtools::build()
 
 ```
+
 ```{r}
 
 usethis::use_pkgdown()
